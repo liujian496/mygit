@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: qhfaxactivity
+spec:
+  rules:
+  - host: www-new.qhfax.com
+    http:
+      paths:
+      - path: /qhfax-activity
+        backend:
+          serviceName: qhfax-activity
+          servicePort: 9096
